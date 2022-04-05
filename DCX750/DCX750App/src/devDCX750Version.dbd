@@ -1,0 +1,1 @@
+device(lsi,INST_IO,devDCX750Version,"DCX750 version")
