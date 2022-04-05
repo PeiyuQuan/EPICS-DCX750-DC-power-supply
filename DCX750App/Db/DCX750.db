@@ -1,0 +1,186 @@
+
+record(bi,"$(P)readDCstate")
+	{
+		field(DESC,"DC state")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readDCstate $(PORT)")
+		field(ZNAM,"OFF")
+		field(ONAM,"ON")
+		field(SCAN,"1 second")
+	}
+
+record(bo,"$(P)DCon")
+	{
+		field(DESC,"DC ON")
+		field(DTYP,"stream")
+		field(OUT,"@DCX750.proto DCon $(PORT)")
+	}
+	
+record(bo,"$(P)DCoff")
+	{
+		field(DESC,"DC OFF")
+		field(DTYP,"stream")
+		field(OUT,"@DCX750.proto DCoff $(PORT)")
+	}
+	
+record(longin,"$(P)readsetpoint")
+	{
+		field(DESC,"set point")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readsetpoint $(PORT)")
+		field(SCAN, "1 second")
+	}
+	
+record(longout,"$(P)setpointvalue")
+	{
+		field(DESC,"set point value")
+		field(DTYP,"stream")
+		field(OUT,"@DCX750.proto setpointvalue $(PORT)")
+	}
+  
+record(mbbi,"$(P)readPowVolCurmode")
+	{
+		field(DESC,"Power Voltage current mode")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readPowVolCurmode $(PORT)")
+		field(ZRVL,"0")
+		field(ONVL,"1")
+		field(TWVL,"2")
+		field(ZRST,"power")
+		field(ONST,"voltage")
+		field(TWST,"current")
+		field(SCAN, "1 second")
+	}
+	
+record(mbbo,"$(P)setpowVolCurmode")
+	{
+		field(DESC,"Power Voltage current mode")
+		field(DTYP,"stream")
+		field(OUT,"@DCX750.proto setpowVolCurmode $(PORT)")
+		field(ZRVL,"0")
+		field(ONVL,"1")
+		field(TWVL,"2")
+		field(ZRST,"power")
+		field(ONST,"voltage")
+		field(TWST,"current")
+	}
+	
+record(longin,"$(P)readActoutputpower")
+	{
+		field(DESC,"Actual output power")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readActoutputpower $(PORT)")
+		field(SCAN, "1 second")
+	}
+record(longin,"$(P)readActoutputvoltage")
+	{
+		field(DESC,"Actual output voltage")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readActoutputvoltage $(PORT)")
+		field(SCAN, "1 second")
+	}
+	
+record(longin,"$(P)readActoutputcurrent")
+	{
+		field(DESC,"Actual output current")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readActoutputcurrent $(PORT)")
+		field(SCAN, "1 second")
+	}
+
+record(longin,"$(P)readRamptime")
+	{
+		field(DESC,"Ramp time")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readRamptime $(PORT)")
+		field(SCAN, "1 second")
+	}
+	
+record(longout,"$(P)setRamptime")
+	{
+		field(DESC,"Ramp time")
+		field(DTYP,"stream")
+		field(OUT,"@DCX750.proto setRamptime $(PORT)")
+	}
+	
+record(longin,"$(P)readshutterdelay")
+	{
+		field(DESC,"shutter delay")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readshutterdelay $(PORT)")
+		field(SCAN, "1 second")
+	}
+	
+record(longout,"$(P)setshutterdelay")
+	{
+		field(DESC,"shutter delay")
+		field(DTYP,"stream")
+		field(OUT,"@DCX750.proto setshutterdelay $(PORT)")
+	}
+	
+record(longin,"$(P)readDeposittimemin")
+	{
+		field(DESC,"Deposit time min")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readDeposittimemin $(PORT)")
+		field(SCAN, "1 second")
+	}	
+	
+record(longin,"$(P)readDeposittimesec")
+	{
+		field(DESC,"Deposit time sec")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readDeposittimesec $(PORT)")
+		field(SCAN, "1 second")
+	}
+
+record(longout,"$(P)setdeposittimemin")
+	{
+		field(DESC,"Deposit time min")
+		field(DTYP,"stream")
+		field(OUT,"@DCX750.proto setdeposittimemin $(PORT)")
+	}	
+	
+record(longout,"$(P)setdeposittimesec")
+	{
+		field(DESC,"Deposit time sec")
+		field(DTYP,"stream")
+		field(OUT,"@DCX750.proto setdeposittimesec $(PORT)")
+	}
+	
+record(longin,"$(P)readreDeposittimemin")
+	{
+		field(DESC,"reman Deposit time min")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readreDeposittimemin $(PORT)")
+		field(SCAN, "1 second")
+	}
+	
+record(longin,"$(P)readreDeposittimesec")
+	{
+		field(DESC,"reman Deposit time sec")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readreDeposittimesec $(PORT)")
+		field(SCAN, "1 second")
+	}
+
+record(longin,"$(P)readretargetcapacity")
+	{
+		field(DESC,"remain target capcity")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readretargetcapacity $(PORT)")
+		field(SCAN, "1 second")
+	}
+
+
+record(bi,"$(P)readshutterstate")
+	{
+		field(DESC,"shutter state")
+		field(DTYP,"stream")
+		field(INP,"@DCX750.proto readshutterstate $(PORT)")
+		field(ZNAM,"all close")
+		field(ONAM,"all open")
+		field(SCAN,"1 second")
+	}
+
+	

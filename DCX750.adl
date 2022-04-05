@@ -1,0 +1,1018 @@
+
+file {
+	name="/home/quan/adls/DCX750.adl"
+	version=030111
+}
+display {
+	object {
+		x=214
+		y=251
+		width=500
+		height=300
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=180
+		y=5
+		width=150
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="DCX750 POWER SUPPLY"
+	align="horiz. centered"
+}
+polyline {
+	object {
+		x=-1
+		y=20
+		width=509
+		height=3
+	}
+	"basic attribute" {
+		clr=15
+		width=3
+	}
+	points {
+		(0,21)
+		(506,21)
+	}
+}
+rectangle {
+	object {
+		x=15
+		y=105
+		width=330
+		height=95
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)readreDeposittimesec"
+	}
+}
+composite {
+	object {
+		x=10
+		y=205
+		width=214
+		height=85
+	}
+	"composite name"=""
+	children {
+		composite {
+			object {
+				x=22
+				y=215
+				width=185
+				height=68
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=22
+						y=215
+						width=120
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Actual output power"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=22
+						y=240
+						width=120
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Actual output voltage"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=22
+						y=265
+						width=120
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Actual output current"
+					align="horiz. centered"
+				}
+				"text update" {
+					object {
+						x=157
+						y=215
+						width=50
+						height=20
+					}
+					monitor {
+						chan="$(P)readActoutputpower"
+						clr=14
+						bclr=61
+					}
+					align="horiz. centered"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=157
+						y=240
+						width=50
+						height=20
+					}
+					monitor {
+						chan="$(P)readActoutputvoltage"
+						clr=14
+						bclr=61
+					}
+					align="horiz. centered"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=157
+						y=263
+						width=50
+						height=20
+					}
+					monitor {
+						chan="$(P)readActoutputcurrent"
+						clr=14
+						bclr=61
+					}
+					align="horiz. centered"
+					limits {
+					}
+				}
+			}
+		}
+		composite {
+			object {
+				x=10
+				y=205
+				width=214
+				height=85
+			}
+			"composite name"=""
+			children {
+				rectangle {
+					object {
+						x=10
+						y=205
+						width=214
+						height=85
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+					}
+				}
+			}
+		}
+	}
+}
+text {
+	object {
+		x=365
+		y=110
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=49
+	}
+	textix="DC on"
+	align="horiz. centered"
+}
+"message button" {
+	object {
+		x=415
+		y=110
+		width=40
+		height=20
+	}
+	control {
+		chan="$(P)DCon"
+		clr=14
+		bclr=61
+	}
+	label="on"
+	press_msg="A"
+}
+rectangle {
+	object {
+		x=351
+		y=105
+		width=120
+		height=95
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+}
+composite {
+	object {
+		x=315
+		y=25
+		width=180
+		height=70
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=318
+				y=35
+				width=90
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="set point value"
+		}
+		text {
+			object {
+				x=323
+				y=65
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="point value"
+		}
+		"text update" {
+			object {
+				x=408
+				y=65
+				width=80
+				height=25
+			}
+			monitor {
+				chan="$(P)readsetpoint"
+				clr=14
+				bclr=31
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=413
+				y=30
+				width=70
+				height=25
+			}
+			control {
+				chan="$(P)setpointvalue"
+				clr=14
+				bclr=31
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=315
+				y=25
+				width=180
+				height=70
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			"dynamic attribute" {
+				chan="$(P)setpointvalue"
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=10
+		y=26
+		width=165
+		height=70
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=13
+				y=36
+				width=90
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="set ramp time"
+		}
+		text {
+			object {
+				x=18
+				y=66
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="ramp time"
+		}
+		"text update" {
+			object {
+				x=93
+				y=66
+				width=80
+				height=25
+			}
+			monitor {
+				chan="$(P)readRamptime"
+				clr=14
+				bclr=31
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=98
+				y=31
+				width=70
+				height=25
+			}
+			control {
+				chan="$(P)setRamptime"
+				clr=14
+				bclr=31
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=10
+				y=26
+				width=165
+				height=70
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			"dynamic attribute" {
+				chan="$(P)setpointvalue"
+			}
+		}
+	}
+}
+text {
+	object {
+		x=177
+		y=35
+		width=50
+		height=15
+	}
+	"basic attribute" {
+		clr=49
+	}
+	textix="Set Mode"
+	align="horiz. centered"
+}
+menu {
+	object {
+		x=230
+		y=30
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)setpowVolCurmode"
+		clr=14
+		bclr=61
+	}
+}
+rectangle {
+	object {
+		x=175
+		y=25
+		width=140
+		height=70
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+}
+composite {
+	object {
+		x=187
+		y=60
+		width=110
+		height=25
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=187
+				y=60
+				width=30
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Mode"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=237
+				y=60
+				width=60
+				height=25
+			}
+			monitor {
+				chan="$(P)readPowVolCurmode"
+				clr=14
+				bclr=61
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=23
+		y=110
+		width=313
+		height=86
+	}
+	"composite name"=""
+	children {
+		composite {
+			object {
+				x=25
+				y=110
+				width=310
+				height=25
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=25
+						y=111
+						width=150
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Set deposition time"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=235
+						y=111
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=20
+					}
+					textix="min"
+					align="horiz. centered"
+				}
+				text {
+					object {
+						x=315
+						y=111
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=20
+					}
+					textix="sec"
+					align="horiz. centered"
+				}
+				"text entry" {
+					object {
+						x=175
+						y=110
+						width=50
+						height=25
+					}
+					control {
+						chan="$(P)setdeposittimemin"
+						clr=14
+						bclr=36
+					}
+					limits {
+					}
+				}
+				"text entry" {
+					object {
+						x=260
+						y=110
+						width=50
+						height=25
+					}
+					control {
+						chan="$(P)setdeposittimesec"
+						clr=14
+						bclr=36
+					}
+					limits {
+					}
+				}
+			}
+		}
+		composite {
+			object {
+				x=45
+				y=141
+				width=290
+				height=25
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=45
+						y=141
+						width=100
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="deposition time"
+					align="horiz. centered"
+				}
+				"text update" {
+					object {
+						x=175
+						y=141
+						width=50
+						height=25
+					}
+					monitor {
+						chan="$(P)readDeposittimemin"
+						clr=14
+						bclr=31
+					}
+					align="horiz. centered"
+					limits {
+					}
+				}
+				text {
+					object {
+						x=235
+						y=141
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=20
+					}
+					textix="min"
+					align="horiz. centered"
+				}
+				"text update" {
+					object {
+						x=260
+						y=141
+						width=50
+						height=25
+					}
+					monitor {
+						chan="$(P)readDeposittimesec"
+						clr=14
+						bclr=31
+					}
+					align="horiz. centered"
+					limits {
+					}
+				}
+				text {
+					object {
+						x=315
+						y=141
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=20
+					}
+					textix="sec"
+					align="horiz. centered"
+				}
+			}
+		}
+		composite {
+			object {
+				x=23
+				y=171
+				width=313
+				height=25
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=23
+						y=171
+						width=150
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="remaining deposition time"
+					align="horiz. centered"
+				}
+				"text update" {
+					object {
+						x=176
+						y=171
+						width=50
+						height=25
+					}
+					monitor {
+						chan="$(P)readreDeposittimemin"
+						clr=14
+						bclr=31
+					}
+					align="horiz. centered"
+					limits {
+					}
+				}
+				text {
+					object {
+						x=236
+						y=171
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=20
+					}
+					textix="min"
+					align="horiz. centered"
+				}
+				"text update" {
+					object {
+						x=260
+						y=171
+						width=50
+						height=25
+					}
+					monitor {
+						chan="$(P)readreDeposittimesec"
+						clr=14
+						bclr=31
+					}
+					align="horiz. centered"
+					limits {
+					}
+				}
+				text {
+					object {
+						x=316
+						y=171
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=20
+					}
+					textix="sec"
+					align="horiz. centered"
+				}
+			}
+		}
+	}
+}
+text {
+	object {
+		x=365
+		y=135
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=49
+	}
+	textix="DC off"
+	align="horiz. centered"
+}
+"message button" {
+	object {
+		x=415
+		y=135
+		width=40
+		height=20
+	}
+	control {
+		chan="$(P)DCoff"
+		clr=14
+		bclr=61
+	}
+	label="off"
+	press_msg="B"
+}
+composite {
+	object {
+		x=350
+		y=165
+		width=115
+		height=20
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=350
+				y=165
+				width=60
+				height=15
+			}
+			"basic attribute" {
+				clr=49
+			}
+			textix="DC state"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=415
+				y=165
+				width=50
+				height=20
+			}
+			monitor {
+				chan="$(P)readDCstate"
+				clr=14
+				bclr=61
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=262
+		y=205
+		width=190
+		height=60
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=265
+				y=215
+				width=90
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="set shutter delay"
+		}
+		"text entry" {
+			object {
+				x=380
+				y=210
+				width=70
+				height=25
+			}
+			control {
+				chan="$(P)setshutterdelay"
+				clr=14
+				bclr=31
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=262
+				y=205
+				width=190
+				height=60
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			"dynamic attribute" {
+				chan="$(P)setpointvalue"
+			}
+		}
+		composite {
+			object {
+				x=270
+				y=239
+				width=170
+				height=25
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=270
+						y=239
+						width=70
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="shutter delay"
+				}
+				"text update" {
+					object {
+						x=360
+						y=239
+						width=80
+						height=25
+					}
+					monitor {
+						chan="$(P)readshutterdelay"
+						clr=14
+						bclr=31
+					}
+					limits {
+					}
+				}
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=234
+		y=268
+		width=250
+		height=21
+	}
+	"composite name"=""
+	children {
+		composite {
+			object {
+				x=243
+				y=269
+				width=236
+				height=20
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=243
+						y=269
+						width=150
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Remaining target capacity"
+				}
+				"text update" {
+					object {
+						x=399
+						y=269
+						width=80
+						height=20
+					}
+					monitor {
+						chan="$(P)readretargetcapacity"
+						clr=14
+						bclr=61
+					}
+					limits {
+					}
+				}
+			}
+		}
+		rectangle {
+			object {
+				x=234
+				y=268
+				width=250
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+		}
+	}
+}
