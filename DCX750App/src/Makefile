@@ -55,7 +55,6 @@ DCX750_DBD += drvAsynSerialPort.dbd
 DCX750_DBD += calc.dbd
 DCX750_DBD += stream-scalcout.dbd
 DCX750_DBD += stream.dbd
-DCX750_DBD += as.dbd
 DCX750_DBD += asSupport.dbd
 
 # DCX750_registerRecordDeviceDriver.cpp derives from DCX750.dbd
